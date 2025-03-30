@@ -52,3 +52,20 @@ dots.forEach((dot)=>{
         updateSlider(parseInt(dot.getAttribute("data-index")))
     })
 })
+
+let autoScroll=setInterval(() => {
+    updateSlider(CurrentSlider+1)
+}, 2000);
+
+slide.forEach((item)=>{
+    item.addEventListener("mouseover",()=>{
+        clearInterval(autoScroll)
+    })
+
+    item.addEventListener("mouseleave", () => {
+        autoScroll=setInterval(() => {
+            updateSlider(CurrentSlider+1)
+        }, 2000); 
+    });
+
+})

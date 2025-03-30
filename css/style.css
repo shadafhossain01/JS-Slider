@@ -38,6 +38,7 @@ body {
 img{
     height: 470px;
     width: 700px;
+    cursor: pointer;
  
 }
 
