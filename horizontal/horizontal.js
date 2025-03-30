@@ -53,19 +53,19 @@ dots.forEach((dot)=>{
     })
 })
 
-let autoScroll=setInterval(() => {
-    updateSlider(CurrentSlider+1)
-}, 2000);
+ let autoScroll=setInterval(() => {
+     updateSlider(CurrentSlider+1)
+ }, 2000);
 
-slide.forEach((item)=>{
-    item.addEventListener("mouseover",()=>{
-        clearInterval(autoScroll)
-    })
+ slide.forEach((item)=>{
+     item.addEventListener("mouseover",()=>{
+         clearInterval(autoScroll)
+     })
 
-    item.addEventListener("mouseleave", () => {
-        autoScroll=setInterval(() => {
-            updateSlider(CurrentSlider+1)
+     item.addEventListener("mouseleave", () => {
+         autoScroll=setInterval(() => {
+             updateSlider(CurrentSlider+1)
         }, 2000); 
-    });
+     });
 
-})
+ })
